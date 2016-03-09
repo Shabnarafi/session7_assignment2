@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<table border="collapse" id="demo1">
+	<tr>
+		<td>row1</td>
+	</tr>
+	<tr>
+		<td>row2</td>
+	</tr>
+	<tr>
+		<td>row3</td>
+	</tr>
+	<tr>
+		<td>row4</td>
+	</tr>
+	<tr>
+		<td>row5</td>
+	</tr>
+</table>
+<input type="button" value="hideRows" onclick="myFunction()"/>
+<script>
+function myFunction()
+{
+var r = document.getElementById("demo1");
+//alert(r);
+var z = r.getElementsByTagName('tr');
+//alert(z);
+var rowCount = z.length;
+//alert(rowCount);
+	for(var i=rowCount-1; i>=0; i--)
+	{
+
+		if(i%2 === 0)
+		{
+
+		r.deleteRow(i);
+		}
+	}
+
+}
+</script>
+</body>
+</html>
